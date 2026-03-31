@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<environmentvariabledefinitions>
+  <environmentvariabledefinition>
+    <schemaname>rb_EmailIT</schemaname>
+    <displayname>EmailIT</displayname>
+    <type>100000000</type>
+    <isrequired>0</isrequired>
+    <introducedversion>1.0.0.0</introducedversion>
+    <iscustomizable>1</iscustomizable>
+    <LocalizedNames>
+      <LocalizedName languagecode="1033" description="EmailIT" />
+    </LocalizedNames>
+    <Descriptions />
+  </environmentvariabledefinition>
+</environmentvariabledefinitions>
