@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <environmentvariabledefinitions>
   <environmentvariabledefinition>
+    <environmentvariabledefinitionid>{9F9012C5-E303-4134-9717-5A5AC560C55C}</environmentvariabledefinitionid>
     <schemaname>rb_EmailIT</schemaname>
     <displayname>EmailIT</displayname>
     <type>100000000</type>
     <isrequired>0</isrequired>
+    <statecode>0</statecode>
+    <statuscode>1</statuscode>
     <introducedversion>1.0.0.0</introducedversion>
     <iscustomizable>1</iscustomizable>
     <LocalizedNames>
