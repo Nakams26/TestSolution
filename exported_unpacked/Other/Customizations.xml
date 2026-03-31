@@ -11,22 +11,7 @@
   <optionsets />
   <CustomControls />
   <EntityDataProviders />
-  <environmentvariabledefinitions>
-    <environmentvariabledefinition>
-      <environmentvariabledefinitionid>{9F9012C5-E303-4134-9717-5A5AC560C55C}</environmentvariabledefinitionid>
-      <schemaname>rb_EmailIT</schemaname>
-      <displayname>EmailIT</displayname>
-      <type>100000000</type>
-      <isrequired>0</isrequired>
-      <introducedversion>1.0.0.0</introducedversion>
-      <iscustomizable>1</iscustomizable>
-      <LocalizedNames>
-        <LocalizedName languagecode="1033" description="EmailIT" />
-      </LocalizedNames>
-      <Descriptions />
-    </environmentvariabledefinition>
-  </environmentvariabledefinitions>
-  <Languages>
+<Languages>
     <Language>1033</Language>
   </Languages>
 </ImportExportXml>
