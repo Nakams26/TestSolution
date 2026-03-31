@@ -1,0 +1,409 @@
+<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.26032.144" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.26034.00145">
+  <Entities>
+    <Entity>
+      <Name LocalizedName="Facture" OriginalName="rb_facture">rb_facture</Name>
+      <PrimaryNameAttribute>rb_number</PrimaryNameAttribute>
+      <EntityInfo>
+        <entity Name="rb_facture">
+          <PrimaryNameAttribute>rb_number</PrimaryNameAttribute>
+          <LocalizedNames>
+            <LocalizedName description="Facture" languagecode="1033" />
+          </LocalizedNames>
+          <LocalizedCollectionNames>
+            <LocalizedCollectionName description="Factures" languagecode="1033" />
+          </LocalizedCollectionNames>
+          <Descriptions />
+          <attributes>
+            <attribute PhysicalName="rb_factureid">
+              <Type>primarykey</Type>
+              <Name>rb_factureid</Name>
+              <LogicalName>rb_factureid</LogicalName>
+              <RequiredLevel>systemrequired</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind</DisplayMask>
+              <LocalizedNames>
+                <LocalizedName description="Facture" languagecode="1033" />
+              </LocalizedNames>
+              <Descriptions />
+            </attribute>
+            <attribute PhysicalName="rb_number">
+              <Type>nvarchar</Type>
+              <Name>rb_number</Name>
+              <LogicalName>rb_number</LogicalName>
+              <RequiredLevel>applicationrequired</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+              <MaxLength>100</MaxLength>
+              <IsPrimaryName>1</IsPrimaryName>
+              <LocalizedNames>
+                <LocalizedName description="Number" languagecode="1033" />
+              </LocalizedNames>
+              <Descriptions />
+            </attribute>
+            <attribute PhysicalName="rb_date">
+              <Type>datetime</Type>
+              <Name>rb_date</Name>
+              <LogicalName>rb_date</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+              <Format>DateOnly</Format>
+              <ImeMode>disabled</ImeMode>
+              <LocalizedNames>
+                <LocalizedName description="Date" languagecode="1033" />
+              </LocalizedNames>
+              <Descriptions />
+            </attribute>
+            <attribute PhysicalName="rb_amount">
+              <Type>decimal</Type>
+              <Name>rb_amount</Name>
+              <LogicalName>rb_amount</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+              <Precision>2</Precision>
+              <MinValue>0</MinValue>
+              <MaxValue>1000000000</MaxValue>
+              <LocalizedNames>
+                <LocalizedName description="Amount" languagecode="1033" />
+              </LocalizedNames>
+              <Descriptions />
+            </attribute>
+            <attribute PhysicalName="rb_status">
+              <Type>picklist</Type>
+              <Name>rb_status</Name>
+              <LogicalName>rb_status</LogicalName>
+              <RequiredLevel>none</RequiredLevel>
+              <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+              <optionset Name="rb_facture_rb_status" localizedName="Status">
+                <OptionSetType>picklist</OptionSetType>
+                <IsGlobal>0</IsGlobal>
+                <LocalizedNames>
+                  <LocalizedName description="Status" languagecode="1033" />
+                </LocalizedNames>
+                <Descriptions />
+                <options>
+                  <option value="126080000">
+                    <labels>
+                      <label description="Open" languagecode="1033" />
+                    </labels>
+                    <Descriptions />
+                  </option>
+                  <option value="126080001">
+                    <labels>
+                      <label description="Closed" languagecode="1033" />
+                    </labels>
+                    <Descriptions />
+                  </option>
+                </options>
+              </optionset>
+              <LocalizedNames>
+                <LocalizedName description="Status" languagecode="1033" />
+              </LocalizedNames>
+              <Descriptions />
+            </attribute>
+          </attributes>
+          <EntitySetName>rb_factures</EntitySetName>
+          <IsActivity>0</IsActivity>
+          <IsActivityParty>0</IsActivityParty>
+          <IsBPFEntity>0</IsBPFEntity>
+          <IsQuickCreateEnabled>1</IsQuickCreateEnabled>
+          <OwnershipType>UserOwned</OwnershipType>
+          <IsValidForQueue>0</IsValidForQueue>
+          <IsConnectionsEnabled>0</IsConnectionsEnabled>
+        </entity>
+      </EntityInfo>
+      <FormXml>
+        <forms type="main">
+          <systemform>
+            <formid>{a1b2c3d4-0001-4000-8000-000000000001}</formid>
+            <LocalizedNames>
+              <LocalizedName description="Invoice Information" languagecode="1033" />
+            </LocalizedNames>
+            <Descriptions />
+            <IsCustomizable>1</IsCustomizable>
+            <CanBeDeleted>1</CanBeDeleted>
+            <formActivationState>1</formActivationState>
+            <IntroducedVersion>1.0.0.0</IntroducedVersion>
+            <form>
+              <tabs>
+                <tab name="tab_general" id="{a1b2c3d4-0010-4000-8000-000000000001}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <columns>
+                    <column width="70%">
+                      <sections>
+                        <section name="section_invoice_details" showlabel="true" showbar="false" locklevel="0" id="{a1b2c3d4-0011-4000-8000-000000000001}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                          <labels>
+                            <label description="Invoice Details" languagecode="1033" />
+                          </labels>
+                          <rows>
+                            <row>
+                              <cell id="{a1b2c3d4-0020-4000-8000-000000000001}" showlabel="true" locklevel="0">
+                                <labels>
+                                  <label description="Number" languagecode="1033" />
+                                </labels>
+                                <control id="rb_number" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="rb_number" disabled="false" uniqueid="{a1b2c3d4-0030-4000-8000-000000000001}" />
+                              </cell>
+                            </row>
+                            <row>
+                              <cell id="{a1b2c3d4-0021-4000-8000-000000000001}" showlabel="true" locklevel="0">
+                                <labels>
+                                  <label description="Date" languagecode="1033" />
+                                </labels>
+                                <control id="rb_date" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="rb_date" disabled="false" uniqueid="{a1b2c3d4-0031-4000-8000-000000000001}" />
+                              </cell>
+                            </row>
+                            <row>
+                              <cell id="{a1b2c3d4-0022-4000-8000-000000000001}" showlabel="true" locklevel="0">
+                                <labels>
+                                  <label description="Amount" languagecode="1033" />
+                                </labels>
+                                <control id="rb_amount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="rb_amount" disabled="false" uniqueid="{a1b2c3d4-0032-4000-8000-000000000001}" />
+                              </cell>
+                            </row>
+                          </rows>
+                        </section>
+                      </sections>
+                    </column>
+                    <column width="30%">
+                      <sections>
+                        <section name="section_status" showlabel="true" showbar="false" locklevel="0" id="{a1b2c3d4-0012-4000-8000-000000000001}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                          <labels>
+                            <label description="Status" languagecode="1033" />
+                          </labels>
+                          <rows>
+                            <row>
+                              <cell id="{a1b2c3d4-0023-4000-8000-000000000001}" showlabel="true" locklevel="0">
+                                <labels>
+                                  <label description="Status" languagecode="1033" />
+                                </labels>
+                                <control id="rb_status" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="rb_status" disabled="false" uniqueid="{a1b2c3d4-0033-4000-8000-000000000001}" />
+                              </cell>
+                            </row>
+                          </rows>
+                        </section>
+                      </sections>
+                    </column>
+                  </columns>
+                </tab>
+              </tabs>
+              <header>
+                <rows>
+                  <row>
+                    <cell id="{a1b2c3d4-0024-4000-8000-000000000001}" showlabel="true" locklevel="0" visible="true">
+                      <labels>
+                        <label description="Number" languagecode="1033" />
+                      </labels>
+                      <control id="rb_number_hdr" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="rb_number" disabled="true" uniqueid="{a1b2c3d4-0034-4000-8000-000000000001}" />
+                    </cell>
+                  </row>
+                </rows>
+              </header>
+              <footer />
+              <formLibraries />
+              <events />
+              <clientresources />
+              <roleobjecttypecodes />
+              <hiddencontrols />
+            </form>
+          </systemform>
+        </forms>
+      </FormXml>
+      <SavedQueries>
+        <savedquery>
+          <savedqueryid>{a1b2c3d4-0002-4000-8000-000000000001}</savedqueryid>
+          <savedqueryidunique>{a1b2c3d4-0002-4000-8000-000000000001}</savedqueryidunique>
+          <returnedtypecode>rb_facture</returnedtypecode>
+          <isdefault>1</isdefault>
+          <isquickfindquery>0</isquickfindquery>
+          <isprivate>0</isprivate>
+          <querytype>0</querytype>
+          <IsCustomizable>1</IsCustomizable>
+          <CanBeDeleted>1</CanBeDeleted>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <layoutxml>
+            <grid name="resultset" jump="rb_number" select="1" preview="1" icon="1">
+              <row name="result" id="rb_factureid">
+                <cell name="rb_number" width="200" />
+                <cell name="rb_date" width="150" />
+                <cell name="rb_amount" width="150" />
+                <cell name="rb_status" width="150" />
+              </row>
+            </grid>
+          </layoutxml>
+          <fetchxml>
+            <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+              <entity name="rb_facture">
+                <attribute name="rb_number" />
+                <attribute name="rb_date" />
+                <attribute name="rb_amount" />
+                <attribute name="rb_status" />
+                <attribute name="rb_factureid" />
+                <order attribute="rb_number" descending="false" />
+              </entity>
+            </fetch>
+          </fetchxml>
+          <LocalizedNames>
+            <LocalizedName description="All Invoices" languagecode="1033" />
+          </LocalizedNames>
+          <Descriptions />
+        </savedquery>
+        <savedquery>
+          <savedqueryid>{a1b2c3d4-0003-4000-8000-000000000001}</savedqueryid>
+          <savedqueryidunique>{a1b2c3d4-0003-4000-8000-000000000001}</savedqueryidunique>
+          <returnedtypecode>rb_facture</returnedtypecode>
+          <isdefault>0</isdefault>
+          <isquickfindquery>0</isquickfindquery>
+          <isprivate>0</isprivate>
+          <querytype>0</querytype>
+          <IsCustomizable>1</IsCustomizable>
+          <CanBeDeleted>1</CanBeDeleted>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <layoutxml>
+            <grid name="resultset" jump="rb_number" select="1" preview="1" icon="1">
+              <row name="result" id="rb_factureid">
+                <cell name="rb_number" width="200" />
+                <cell name="rb_date" width="150" />
+                <cell name="rb_amount" width="150" />
+                <cell name="rb_status" width="150" />
+              </row>
+            </grid>
+          </layoutxml>
+          <fetchxml>
+            <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+              <entity name="rb_facture">
+                <attribute name="rb_number" />
+                <attribute name="rb_date" />
+                <attribute name="rb_amount" />
+                <attribute name="rb_status" />
+                <attribute name="rb_factureid" />
+                <order attribute="rb_number" descending="false" />
+                <filter type="and">
+                  <condition attribute="rb_status" operator="eq" value="126080000" />
+                </filter>
+              </entity>
+            </fetch>
+          </fetchxml>
+          <LocalizedNames>
+            <LocalizedName description="Open Invoices" languagecode="1033" />
+          </LocalizedNames>
+          <Descriptions />
+        </savedquery>
+        <savedquery>
+          <savedqueryid>{a1b2c3d4-0004-4000-8000-000000000001}</savedqueryid>
+          <savedqueryidunique>{a1b2c3d4-0004-4000-8000-000000000001}</savedqueryidunique>
+          <returnedtypecode>rb_facture</returnedtypecode>
+          <isdefault>0</isdefault>
+          <isquickfindquery>0</isquickfindquery>
+          <isprivate>0</isprivate>
+          <querytype>0</querytype>
+          <IsCustomizable>1</IsCustomizable>
+          <CanBeDeleted>1</CanBeDeleted>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <layoutxml>
+            <grid name="resultset" jump="rb_number" select="1" preview="1" icon="1">
+              <row name="result" id="rb_factureid">
+                <cell name="rb_number" width="200" />
+                <cell name="rb_date" width="150" />
+                <cell name="rb_amount" width="150" />
+                <cell name="rb_status" width="150" />
+              </row>
+            </grid>
+          </layoutxml>
+          <fetchxml>
+            <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+              <entity name="rb_facture">
+                <attribute name="rb_number" />
+                <attribute name="rb_date" />
+                <attribute name="rb_amount" />
+                <attribute name="rb_status" />
+                <attribute name="rb_factureid" />
+                <order attribute="rb_number" descending="false" />
+                <filter type="and">
+                  <condition attribute="rb_status" operator="eq" value="126080001" />
+                </filter>
+              </entity>
+            </fetch>
+          </fetchxml>
+          <LocalizedNames>
+            <LocalizedName description="Closed Invoices" languagecode="1033" />
+          </LocalizedNames>
+          <Descriptions />
+        </savedquery>
+      </SavedQueries>
+    </Entity>
+  </Entities>
+  <Roles />
+  <Workflows />
+  <FieldSecurityProfiles />
+  <Templates />
+  <EntityMaps />
+  <EntityRelationships />
+  <OrganizationSettings />
+  <optionsets />
+  <CustomControls />
+  <AppModuleSiteMaps>
+    <AppModuleSiteMap>
+      <SiteMapUniqueName>rb_InvoiceManagement_SiteMap</SiteMapUniqueName>
+      <EnableCollapsibleGroups>False</EnableCollapsibleGroups>
+      <ShowHome>True</ShowHome>
+      <ShowPinned>True</ShowPinned>
+      <ShowRecents>True</ShowRecents>
+      <SiteMap IntroducedVersion="1.0.0.0">
+        <Area Id="area_invoices" ShowGroups="true" IntroducedVersion="1.0.0.0">
+          <Titles>
+            <Title LCID="1033" Title="Invoices" />
+          </Titles>
+          <Group Id="group_invoices" IntroducedVersion="1.0.0.0" IsProfile="false">
+            <Titles>
+              <Title LCID="1033" Title="Invoices" />
+            </Titles>
+            <SubArea Id="subarea_factures" Entity="rb_facture" IntroducedVersion="1.0.0.0">
+              <Titles>
+                <Title LCID="1033" Title="Factures" />
+              </Titles>
+            </SubArea>
+          </Group>
+        </Area>
+      </SiteMap>
+      <LocalizedNames>
+        <LocalizedName description="Invoice Management Site Map" languagecode="1033" />
+      </LocalizedNames>
+    </AppModuleSiteMap>
+  </AppModuleSiteMaps>
+  <AppModules>
+    <AppModule>
+      <UniqueName>rb_InvoiceManagementApp</UniqueName>
+      <Name>Invoice Management</Name>
+      <IntroducedVersion>1.0.0.0</IntroducedVersion>
+      <ClientType>4</ClientType>
+      <FormFactor>1</FormFactor>
+      <IsDefault>0</IsDefault>
+      <SiteMapUniqueName>rb_InvoiceManagement_SiteMap</SiteMapUniqueName>
+      <LocalizedNames>
+        <LocalizedName description="Invoice Management" languagecode="1033" />
+      </LocalizedNames>
+      <Descriptions>
+        <Description description="Adri Invoice Management App" languagecode="1033" />
+      </Descriptions>
+      <AppModuleComponents>
+        <AppModuleComponent type="1" schemaName="rb_facture" behavior="0" />
+        <AppModuleComponent type="29" savedQueryId="{a1b2c3d4-0002-4000-8000-000000000001}" behavior="0" />
+        <AppModuleComponent type="29" savedQueryId="{a1b2c3d4-0003-4000-8000-000000000001}" behavior="0" />
+        <AppModuleComponent type="29" savedQueryId="{a1b2c3d4-0004-4000-8000-000000000001}" behavior="0" />
+        <AppModuleComponent type="60" savedQueryId="{a1b2c3d4-0001-4000-8000-000000000001}" behavior="0" />
+      </AppModuleComponents>
+    </AppModule>
+  </AppModules>
+  <connectionreferences>
+    <connectionreference connectionreferencelogicalname="rb_sharedcommondataserviceforapps">
+      <connectionreferencedisplayname>Microsoft Dataverse - Invoice Flow</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+  </connectionreferences>
+  <EntityDataProviders />
+  <Languages>
+    <Language>1033</Language>
+  </Languages>
+</ImportExportXml>

@@ -1,0 +1,46 @@
+<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.26032.144" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.26034.00145">
+  <Entities></Entities>
+  <Roles></Roles>
+  <Workflows></Workflows>
+  <FieldSecurityProfiles></FieldSecurityProfiles>
+  <Templates />
+  <EntityMaps />
+  <EntityRelationships />
+  <OrganizationSettings />
+  <optionsets />
+  <CustomControls />
+  <AppModuleSiteMaps>
+    <AppModuleSiteMap>
+      <SiteMapUniqueName>rb_TestEve</SiteMapUniqueName>
+      <EnableCollapsibleGroups>False</EnableCollapsibleGroups>
+      <ShowHome>True</ShowHome>
+      <ShowPinned>True</ShowPinned>
+      <ShowRecents>True</ShowRecents>
+      <SiteMap IntroducedVersion="7.0.0.0">
+        <Area Id="area_b8f67c9c" ResourceId="SitemapDesigner.NewTitle" DescriptionResourceId="SitemapDesigner.NewTitle" ShowGroups="true" IntroducedVersion="7.0.0.0">
+          <Titles>
+            <Title LCID="1033" Title="Area1" />
+          </Titles>
+          <Group Id="group_f9bea8ce" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+            <Titles>
+              <Title LCID="1033" Title="Group1" />
+            </Titles>
+            <SubArea Id="subarea_72323907" ResourceId="SitemapDesigner.NewSubArea" Icon="/_imgs/imagestrips/transparent_spacer.gif" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+              <Titles>
+                <Title LCID="1033" Title="Subarea1" />
+              </Titles>
+            </SubArea>
+          </Group>
+        </Area>
+      </SiteMap>
+      <LocalizedNames>
+        <LocalizedName description="Test Eve" languagecode="1033" />
+      </LocalizedNames>
+    </AppModuleSiteMap>
+  </AppModuleSiteMaps>
+  <AppModules />
+  <EntityDataProviders />
+  <Languages>
+    <Language>1033</Language>
+  </Languages>
+</ImportExportXml>

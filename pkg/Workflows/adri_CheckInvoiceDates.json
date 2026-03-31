@@ -1,0 +1,107 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "rb_sharedcommondataserviceforapps"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "Recurrence": {
+          "recurrence": {
+            "frequency": "Day",
+            "interval": 1,
+            "schedule": {
+              "hours": [
+                "7"
+              ],
+              "minutes": [
+                0
+              ]
+            },
+            "timeZone": "UTC"
+          },
+          "metadata": {
+            "operationMetadataId": "a1b2c3d4-0050-4000-8000-000000000001"
+          },
+          "type": "Recurrence"
+        }
+      },
+      "actions": {
+        "List_open_invoices": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "a1b2c3d4-0051-4000-8000-000000000001"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "rb_factures",
+              "$filter": "rb_status eq 100000000 and adri_date le @{formatDateTime(utcNow(), 'yyyy-MM-dd')}"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Apply_to_each_invoice": {
+          "foreach": "@outputs('List_open_invoices')?['body/value']",
+          "actions": {
+            "Close_invoice": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "a1b2c3d4-0052-4000-8000-000000000001"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "rb_factures",
+                  "recordId": "@items('Apply_to_each_invoice')?['rb_factureid']",
+                  "item/rb_status": 100000001
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "List_open_invoices": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "a1b2c3d4-0053-4000-8000-000000000001"
+          },
+          "type": "Foreach"
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

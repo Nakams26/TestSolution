@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{3dbc88c9-9077-46ef-b77c-f94a1508d905}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab name="tab_general" id="{a1b2c3d4-0010-4000-8000-000000000001}" IsUserDefined="0" showlabel="true" expanded="true">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="70%">
+              <sections>
+                <section name="section_invoice" showlabel="true" showbar="false" id="{a1b2c3d4-0011-4000-8000-000000000001}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                  <labels>
+                    <label description="Invoice Details" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{a1b2c3d4-0020-4000-8000-000000000001}" showlabel="true">
+                        <labels>
+                          <label description="Number" languagecode="1033" />
+                        </labels>
+                        <control id="rb_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="rb_name" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a1b2c3d4-0021-4000-8000-000000000001}" showlabel="true">
+                        <labels>
+                          <label description="Date" languagecode="1033" />
+                        </labels>
+                        <control id="rb_date" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="rb_date" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a1b2c3d4-0022-4000-8000-000000000001}" showlabel="true">
+                        <labels>
+                          <label description="Amount" languagecode="1033" />
+                        </labels>
+                        <control id="rb_amount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="rb_amount" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="30%">
+              <sections>
+                <section name="section_status" showlabel="true" showbar="false" id="{a1b2c3d4-0012-4000-8000-000000000001}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                  <labels>
+                    <label description="Status" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{a1b2c3d4-0023-4000-8000-000000000001}" showlabel="true">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="rb_status" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="rb_status" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Invoice Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>
