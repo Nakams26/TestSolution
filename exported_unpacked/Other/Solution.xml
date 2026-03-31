@@ -79,6 +79,7 @@
     </Publisher>
     <RootComponents>
       <RootComponent type="1" schemaName="rb_facture" behavior="0" />
+      <RootComponent type="380" schemaName="rb_EmailIT" behavior="0" />
     </RootComponents>
     <MissingDependencies />
   </SolutionManifest>
