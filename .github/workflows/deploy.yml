@@ -6,6 +6,7 @@ on:
       - master
     paths:
       - 'exported_unpacked/**'
+  workflow_dispatch:
 
 jobs:
   deploy:
