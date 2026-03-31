@@ -8,6 +8,10 @@ on:
       - 'exported_unpacked/**'
   workflow_dispatch:
 
+concurrency:
+  group: power-platform-deploy
+  cancel-in-progress: false
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
