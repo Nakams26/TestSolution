@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{a1b2c3d4-e001-4000-8000-000000000001}"
+          Name="Invoice Management Process"
+          Description="Guides users through the invoice management lifecycle"
+          Category="4"
+          Subcategory="0"
+          IsCustomizable="1"
+          OnDemand="0"
+          TriggerOnCreate="0"
+          TriggerOnDelete="0"
+          TriggerOnUpdateAttributeList=""
+          LogicType="0"
+          LanguageCode="1033"
+          PrimaryEntityTypeCode="rb_facture"
+          StatusCode="2"
+          StateCode="1"
+          Scope="2"
+          RunAs="1"
+          Type="1"
+          Mode="0"
+          ProcessOrder="0"
+          SyncWorkflowLogOnFailure="0"
+          UniqueName="rb_InvoiceManagementProcess">
+  <LocalizedNames>
+    <LocalizedName LanguageCode="1033" Description="Invoice Management Process" />
+  </LocalizedNames>
+  <Descriptions>
+    <Description LanguageCode="1033" Description="Guides users through the invoice management lifecycle" />
+  </Descriptions>
+  <Steps>
+    <Step StepId="{a1b2c3d4-e002-4000-8000-000000000001}"
+          Name="New Invoice"
+          StepTypeCode="1"
+          Rank="1"
+          Sequence="0"
+          Description=""
+          StageCategory="4">
+      <Steps>
+        <Step StepId="{a1b2c3d4-e010-4000-8000-000000000001}"
+              Name="rb_number"
+              StepTypeCode="2"
+              Rank="1"
+              Sequence="0"
+              AttributeName="rb_number"
+              IsRequired="1"
+              Description="" />
+        <Step StepId="{a1b2c3d4-e011-4000-8000-000000000001}"
+              Name="rb_date"
+              StepTypeCode="2"
+              Rank="2"
+              Sequence="1"
+              AttributeName="rb_date"
+              IsRequired="1"
+              Description="" />
+        <Step StepId="{a1b2c3d4-e012-4000-8000-000000000001}"
+              Name="rb_amount"
+              StepTypeCode="2"
+              Rank="3"
+              Sequence="2"
+              AttributeName="rb_amount"
+              IsRequired="0"
+              Description="" />
+      </Steps>
+    </Step>
+    <Step StepId="{a1b2c3d4-e003-4000-8000-000000000001}"
+          Name="Review"
+          StepTypeCode="1"
+          Rank="2"
+          Sequence="1"
+          Description=""
+          StageCategory="1">
+      <Steps>
+        <Step StepId="{a1b2c3d4-e013-4000-8000-000000000001}"
+              Name="rb_dateecheance"
+              StepTypeCode="2"
+              Rank="1"
+              Sequence="0"
+              AttributeName="rb_dateecheance"
+              IsRequired="0"
+              Description="" />
+        <Step StepId="{a1b2c3d4-e014-4000-8000-000000000001}"
+              Name="rb_tax"
+              StepTypeCode="2"
+              Rank="2"
+              Sequence="1"
+              AttributeName="rb_tax"
+              IsRequired="0"
+              Description="" />
+      </Steps>
+    </Step>
+    <Step StepId="{a1b2c3d4-e004-4000-8000-000000000001}"
+          Name="Complete"
+          StepTypeCode="1"
+          Rank="3"
+          Sequence="2"
+          Description=""
+          StageCategory="3">
+      <Steps>
+        <Step StepId="{a1b2c3d4-e015-4000-8000-000000000001}"
+              Name="rb_status"
+              StepTypeCode="2"
+              Rank="1"
+              Sequence="0"
+              AttributeName="rb_status"
+              IsRequired="1"
+              Description="" />
+      </Steps>
+    </Step>
+  </Steps>
+</Workflow>

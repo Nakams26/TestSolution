@@ -79,6 +79,7 @@
     </Publisher>
     <RootComponents>
       <RootComponent type="1" schemaName="rb_facture" behavior="0" />
+      <RootComponent type="29" id="{a1b2c3d4-e001-4000-8000-000000000001}" behavior="0" />
     </RootComponents>
     <MissingDependencies />
   </SolutionManifest>
